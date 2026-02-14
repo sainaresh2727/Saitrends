@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Googlelogo from '../assets/Images/googlelogo.png'
 import Star from '../assets/Images/star.png'
 import { FcRating } from "react-icons/fc";
@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules'
 import { MdVerified } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Customer() {
   let CustomerReviewArray=[
@@ -50,17 +52,24 @@ function Customer() {
       color:"#a52a2a"
     },
   ]
+  useEffect(()=>{
+    AOS.init({
+          duration: 1000, 
+          once: false      
+        });
+  },[])
   return (
     <>
     <section className='container-fluid p-5' id='customercf'>
     <div className="container" id='customercontainer'>
     
     <div id='customerheading' className='text-center'>
-    <h1 className='mb-0'>What Our Customer Says!</h1>
+    <h1 className='mb-0' data-aos="zoom-in-up"
+   data-aos-duration='1500'>What Our Customer Says!</h1>
     <div className='hrline'></div>
     </div>
 
-    <div id='googlereviewparent' className='mt-3'>
+    <div id='googlereviewparent' className='mt-3' data-aos="zoom-in-up" data-aos-duration='2000'>
     
     <div id='ratingprarent'>
     <div id='googlelogo' className=''> 
@@ -79,7 +88,7 @@ function Customer() {
    
     </div>
 
-    <div id='swipergrandparent' className='mt-3'>
+    <div id='swipergrandparent' className='mt-3' data-aos="zoom-in-up" data-aos-duration='2000'>
     <Swiper modules={[Autoplay]} spaceBetween={50}
        loop={true} autoplay={{delay: 3000,disableOnInteraction: false }}
        breakpoints={{

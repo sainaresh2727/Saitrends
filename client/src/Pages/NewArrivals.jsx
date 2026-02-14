@@ -1,16 +1,28 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
 import { My_Context } from '../Context/Context';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function NewArrivals() {
   let {Mens,Kids,Womens,Shoes,Bags}=useContext(My_Context)
+
+  useEffect(()=>{
+    AOS.init({
+            duration: 1000, 
+            once: false      
+               }); 
+  },[])
+
   return (
    <>
    <section className='container-fluid py-5'>
    <div className="container">
     <div className='text-center' id='newarrivalsheading'>
-    <h2 className='mb-1'>You'r In New Arrivals</h2>
+    <h2 className='mb-1' data-aos="zoom-in-up"
+   data-aos-duration='1500'>You'r In New Arrivals</h2>
     
     <marquee behavior="" direction="" id=''className='mt-2'>
     <div id='marqueenewarrivals'>
@@ -29,7 +41,7 @@ function NewArrivals() {
     {
         Mens.slice(0,4).map((x,y)=>{
         return (
-        <div className="col-lg-3 mt-3 col-12">
+        <div className="col-lg-3 mt-3 col-12" data-aos="fade-down" data-aos-duration='2000'>
         <div className="card h-100 menscardarrivals" key={x._id}>
         <div className='imageparent'>
          <img src={x.ProductImg} alt="" />
@@ -67,7 +79,7 @@ function NewArrivals() {
     {
         Kids.slice(0,4).map((x,y)=>{
         return(
-        <div className="col-lg-3 mt-3 col-12">
+        <div className="col-lg-3 mt-3 col-12" data-aos="fade-down" data-aos-duration='2000'>
         <div className="card menscardarrivals" id='' key={x._id}>
         <div className='imageparentKids'>
         <img src={x.ProductImg} alt="" />
@@ -103,7 +115,7 @@ function NewArrivals() {
     {
         Womens.slice(0,4).map((x,y)=>{
         return (
-        <div className="col-lg-3 mt-3 col-12">
+        <div className="col-lg-3 mt-3 col-12" data-aos="fade-down" data-aos-duration='2000'>
         <div className="card h-100 menscardarrivals" key={x._id}>
         <div className='imageparent'>
          <img src={x.ProductImg} alt="" />
@@ -140,7 +152,7 @@ function NewArrivals() {
     {
         Bags.slice(0,4).map((x,y)=>{
         return (
-        <div className="col-lg-3 mt-3 col-12">
+        <div className="col-lg-3 mt-3 col-12" data-aos="fade-down" data-aos-duration='2000'>
         <div className="card h-100 menscardarrivals" key={x._id}>
         <div className='imageparent'>
          <img src={x.ProductImg} alt="" />
@@ -178,7 +190,7 @@ function NewArrivals() {
     {
         Shoes.slice(0,4).map((x,y)=>{
         return (
-        <div className="col-lg-3 mt-3 col-12">
+        <div className="col-lg-3 mt-3 col-12" data-aos="fade-down" data-aos-duration='2000'>
         <div className="card h-100 menscardarrivals" key={x._id}>
         <div className='imageparent'>
          <img src={x.ProductImg} alt="" />

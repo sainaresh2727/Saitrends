@@ -1,18 +1,29 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { My_Context } from '../Context/Context'
 import { FaCartPlus } from "react-icons/fa";
 import { TbListDetails } from "react-icons/tb";
 import { CiHeart } from "react-icons/ci"
 import { useNavigate } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Kids() {
   let navigate=useNavigate()
   let {Kids,AddToCart} =useContext(My_Context)
+
+  useEffect(()=>{
+ AOS.init({
+        duration: 1000, 
+        once: false      
+        }); 
+  },[])
+
   return (
     <>
      <section className='container-fluid mb-5'>
      <div className="container">
-     <div className='text-center mt-4' id='mensectioncontent'>
+     <div className='text-center mt-4' id='mensectioncontent'      data-aos="zoom-in-up"
+      data-aos-duration='1500'>
       <h2 className='mb-0'>Kid's Fun Fashion</h2>
       <h4>Tiny Trends For Tiny Stars</h4>
        </div>
@@ -20,7 +31,8 @@ function Kids() {
         {
           Kids.map((x,y)=>{
             return(
-            <div className="col-lg-3 mt-5 col-12">
+            <div className="col-lg-3 mt-5 col-12" data-aos="fade-down" 
+               data-aos-duration='1500'>
             <div className="card h-100 kidscard" id='MensCard'>
             <div className='imageParentKids'>
             <img src={x.ProductImg} alt="" />

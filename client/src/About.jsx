@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import vector1 from './assets/Images/7479.jpg'
 import vector2 from './assets/Images/43289.jpg'
@@ -18,6 +18,9 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { FaShippingFast } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom'
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
   let vectorimages=[
@@ -46,18 +49,25 @@ function About() {
     
   ]
   let navigate=useNavigate()
+  useEffect(()=>{
+    AOS.init({
+            duration: 1000, 
+            once: false      
+               }); 
+  },[])
   return (
     <>
     <section className='container-fluid py-5' id='aboutcf'>
     <div className="container">
     <div id='aboutusheading' className='text-center'>
-    <h2 className='mb-0'>About Us</h2>
+    <h2 className='mb-0' data-aos="zoom-in-up"
+   data-aos-duration='1500'>About Us</h2>
     <div className='hrline'></div>
     </div>
    
     <div className="row mt-2 mt-lg-5">
    
-    <div className="col-lg-6  col-12" id='aboutusimgcol'>
+    <div className="col-lg-6  col-12" id='aboutusimgcol' data-aos="zoom-out-up" data-aos-duration='2000'>
     <Swiper modules={[Autoplay]} spaceBetween={10} className='mt-4'
     loop={true} autoplay={{delay: 1300,disableOnInteraction: false }}
         breakpoints={{
@@ -86,7 +96,7 @@ function About() {
     
     </Swiper>
     </div>
-    <div className="col-lg-6 col-12 mt-lg-0 mt-5" id='aboutcontent'>
+    <div className="col-lg-6 col-12 mt-lg-0 mt-5" id='aboutcontent' data-aos="zoom-out-up" data-aos-duration='2000'>
     <h1>Crafting With Style, <br />Delevering With Confidence</h1>
     <div className='aboutpara'>
     <p>We are a Passionate Clothing Brand Dedicated to Bringing You the Latest Trends with <span className='orangered'>Comfort, Quality, and Affordability</span> at the Heart of Everything We do.</p>
@@ -99,7 +109,7 @@ function About() {
 
     <div className="row mt-5">
     
-    <div className='col-lg-6 col-12'id='whowearecol1'>
+    <div className='col-lg-6 col-12'id='whowearecol1' data-aos="zoom-in-up" data-aos-duration='2000'>
    <h2 className='whowearehead'>WHO WE ARE</h2>
     <h2 className='whowearestyle'>Elevating Your Style, One Outfit at a Time!</h2>
     <div id='whowearep2' className=''>
@@ -109,7 +119,7 @@ function About() {
     </div>
     <button id='explorebtn' onClick={()=>navigate('/NewArrivals')}>Discover More</button>
     </div>
-    <div className="col-lg-6 mt-lg-0 mt-3" id='whowearecol2parent'>
+    <div className="col-lg-6 mt-lg-0 mt-3" id='whowearecol2parent' data-aos="zoom-in-up" data-aos-duration='2000'>
     <div className="row d-flex justify-content-center gap-4">
     <div className="col-lg-6 whowearecol2childs">
     <GiClothes className='iconwhoweare' />
@@ -133,13 +143,15 @@ function About() {
 
     <div className="row mt-5" id='whychooseus'>
     <div className='text-center'>
-    <h2>WHY CHOOSE US</h2>
-    <h1 className='mt-3'>What We Offer</h1>
+    <h2 data-aos="zoom-in-up"
+   data-aos-duration='1500'>WHY CHOOSE US</h2>
+    <h1 className='mt-3' data-aos="zoom-in-up"
+   data-aos-duration='1500'>What We Offer</h1>
     </div>
     {
       whatweoffer.map((x,y)=>{
         return(
-          <div className="col-lg-4 col-12 mt-5 mt-lg-0">
+          <div className="col-lg-4 col-12 mt-5 mt-lg-0" data-aos="zoom-in-up" data-aos-duration='2000'>
           <div className="card h-100 text-center" key={x.id} id='whatweoffercard'>
           <div className="card-body" id='whattweoffercardbody'>
           <div className='iconwhywechooseicon mx-auto'>
@@ -157,11 +169,12 @@ function About() {
 
     <div className="row  mt-5" id="faqsrow">
     <div>
-    <h2 className="text-center mb-0" id='askedquestion'>Frequently Asked Questions</h2>
+    <h2 className="text-center mb-0" id='askedquestion' data-aos="zoom-in-up"
+   data-aos-duration='1500'>Frequently Asked Questions</h2>
     <div className='hrline'></div>
     </div>
    
-    <div className="accordion col-md-8 mx-auto mt-4" id="accordionExample">
+    <div className="accordion col-md-8 mx-auto mt-4" id="accordionExample" >
 
         {/* FAQ 1 */}
         <div className="accordion-item">

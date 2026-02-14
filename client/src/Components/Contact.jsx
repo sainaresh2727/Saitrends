@@ -1,30 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Contactimg from '../assets/Images/contactimage.jpg'
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Contact() {
+  useEffect(()=>{
+    AOS.init({
+        duration: 1000, 
+        once: false      
+               }); 
+  },[])
   return (
     <>
     <section className='container-fluid py-5'>
     <div className="container">
     <div className='text-center' id='contactheading'>
-    <h2 className='mb-0'>Contact Us</h2>
+    <h2 className='mb-0' data-aos="zoom-in-up"
+   data-aos-duration='1500'>Contact Us</h2>
     <div className='hrline'></div>
     </div>
     <div className="row mt-0 mt-lg-5">
-    <div className="col-lg-6" id='contactusimaagecol1'>
+    <div className="col-lg-6 col-12" id='contactusimaagecol1' data-aos="zoom-in" data-aos-duration='2000'>
     <img src={Contactimg}/>
     </div>
-    <div className="col-lg-6" id='contactpara'>
+    <div className="col-lg-6 col-12" id='contactpara' data-aos="zoom-in" data-aos-duration='2000'>
     <p>At Sai Trends, we’re Always here to Help you with Your Shopping Needs. Whether you Have Questions About Orders, Sizing, Returns, or New Arrivals, Feel Free to Reach Out to Us Anytime.</p>
     <p>Our support team is dedicated to providing quick responses and ensuring you have a smooth and enjoyable shopping experience. We believe that great fashion should be backed by great service, and we are committed to assisting you at every step of your shopping journey.</p>
     <p>From helping you choose the perfect outfit to tracking your order and resolving concerns, our team is ready to support you with professionalism and care. Your satisfaction is our priority, and we continuously strive to improve our services to meet your expectations.</p>
     </div>
     </div>
-    <div className="row mt-4">
-    <div className="col-lg-6" id='contactuscol3'>
+    <div className="row mt-5">
+    <div className="col-lg-6 col-12" id='contactuscol3' data-aos="zoom-in" data-aos-duration='1000'>
     <h4>Get In Touch</h4>
     <p>Feel Free to Reach Out Through Any of the Methods Below :</p>
     <div className='contactinfo'>
@@ -40,7 +49,7 @@ function Contact() {
     <p>saitrends27@gmail.com</p>
     </div>
     </div>
-    <div className="col-lg-6 mt-4 mt-lg-0" id='sendmessage'>
+    <div className="col-lg-6 col-12 mt-4 mt-lg-0" id='sendmessage' data-aos="zoom-in" data-aos-duration='1000'>
     <h4>Send a Message</h4>
     <div className='formcontact'>
     <input type="text" className='form-control' placeholder='Enter Your Name' />

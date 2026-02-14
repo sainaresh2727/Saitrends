@@ -1,0 +1,2047 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  color: #8B7CF6; */
+  /* background: linear-gradient(100deg,#7f6df2 0%,
+    #8B7CF6 40%,
+    #C6A8FF 70%,
+    #B18CFF 100%
+  ); */
+    /* box-shadow: 0px 0px 5px #8B7CF6; */
+    cursor: pointer;
+}
+
+/* NAVBAR CSS STARTS */
+#navbarcf{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+
+#navbarcontainer{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 6px 25px #2b292926;
+}
+#brand img{
+  height: 80px;
+  display: block;
+  width: auto;
+  margin: auto 0px;
+}
+#menubarlg{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.navlink {
+  padding-top:    10px;
+  padding-bottom: 10px;
+  padding-left:   20px;
+  padding-right:  20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.navlink:hover{
+  color: orangered;
+  position: relative;
+}
+
+.active {
+  color: white;
+  padding: 6px 20px;
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  color: white;
+  box-shadow: 0 4px 10px rgba(183, 169, 238, 0.45);
+  border-radius: 20px;
+}
+
+.iconslg{
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  gap: 8px;
+  margin: auto 0px;
+}
+#purchaselogoutbtn{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#purchasebtn{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top:    10px;
+  padding-bottom: 10px;
+  padding-left:  20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  box-shadow: 0 4px 10px rgba(183, 169, 238, 0.45);
+  color: white;
+}
+#profileid{
+  height: 40px;
+  width:  40px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  /* border: solid 1px black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#profileid p{
+  font-size: x-large;
+  color: white;
+  margin: auto 0px;
+}
+#logoutbtn
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background-color: orangered;
+  color: white;
+  padding-top:    10px;
+  padding-bottom: 10px;
+  padding-left:  20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px orangered;
+}
+.btninsideicon{
+  margin: auto 0px;
+  font-size: 22px;
+}
+#categories{
+  color: white;
+  padding: 6px 20px;
+  text-decoration: none;
+  border: none;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  color: white;
+  box-shadow: 0 4px 10px rgba(183, 169, 238, 0.45);
+  border-radius: 20px;
+  position: relative;
+}
+.categoriescontent{
+  margin: auto 0px;
+}
+.categoriessection{
+  bottom: -250px;
+  left: -10px;
+  position: absolute;
+  height: 250px;
+  width:  155px;
+  border: solid 1px white;
+  box-shadow: 0px 0px 10px #808080;
+  background-color: white;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: 1s;
+}
+.categorieslink{
+  text-decoration: none;
+  color: #6b7280;
+}
+#categories:hover .categoriessection{
+  display: flex;
+}
+/* SMALL SCREENS */
+#smnavbarcontainer{
+  box-shadow: 0px 4px 12px #2b292926;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+#smbrandimg img{
+  height: 85px;
+  margin: auto 0px;
+}
+#bar{
+  color: #7766fa;
+  font-size: 22px;
+  margin: auto 0px;
+}
+#smnavbaroffcanvas{
+  width: 75% !important;
+}
+#smnavlinks{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .navlink {
+    padding: 12px 16px;
+    color: black;
+    background: none;
+    box-shadow: none;
+  }
+
+  .active {
+    padding: 12px 16px;
+    color: white !important;
+    background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+    border-radius: 20px;
+}
+#purchaselogoutbtn{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#purchasebtn{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top:    5px;
+  padding-bottom: 5px;
+  padding-left:  10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  box-shadow: 0 4px 4px rgba(183, 169, 238, 0.45);
+  color: white;
+}
+
+#logoutbtn
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background-color: orangered;
+  color: white;
+  padding-top:    5px;
+  padding-bottom: 5px;
+  padding-left:  10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px orangered;
+}
+.btninsideicon{
+  margin: auto 0px;
+  font-size: 16px;
+}
+}
+
+/* =============NAVBAR CSS ENDS===========*/
+/* =====HR LINE CSS STARTS ====*/
+.hrline{
+  height: 3px;
+  background-color: orangered;
+  width: 80px;
+  display: block;
+  margin: 0px auto;
+  border-radius: 50%;
+}
+/* =====HR LINE CSS ENDS   ====*/
+/* =============ST FAMILY CSS STARTS===== */
+.primarycolor{
+  font-weight: bold;
+}
+.ourfamilytext{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#stfamcol1{
+  /* border: solid 1px aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 345px;
+}
+.imgparent{
+  height: 300px;
+  width:  300px;
+  /* border: solid 2px #7766fa; */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imgparent img{
+  height: 100%;
+  border-radius: 50%;
+  width: 100%;
+  transition: 1s;
+}
+.imgparent img:hover{
+  transform: scale(1.1);
+}
+#stfamcol2{
+  display: flex;
+  align-items: center;
+  /* border: solid 1px aqua; */
+}
+#stfamilypara1{
+  width: 100%;
+  height: 280px;
+  /* border: solid 1px #7766fa; */
+  /* box-shadow: 0px 0px 20px #7766fa; */
+  box-shadow: 0 0 8px rgba(119, 102, 250, 0.25);
+  border-top-left-radius:     30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: 1s;
+  border: solid 1px #7766fa;
+}
+#stfamilypara1:hover{
+  transform: translateY(-10px);
+}
+#stfamilypara1 h6{
+  text-align: center;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: bold;
+}
+#stfamilypara1 p
+{
+ font-family: "Josefin Sans", sans-serif;
+}
+.fmname{
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.fmname p{
+  font-weight: bold;
+  color: orangered;
+   font-family: "Josefin Sans", sans-serif;
+}
+#stfamcol3{
+  display: flex;
+  align-items: center;
+  /* border: solid 1px black; */
+}
+#stfamilypara2{
+  border-top-left-radius:     30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+ border: solid 1px #7766fa;  
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 0 8px rgba(119, 102, 250, 0.25);
+  transition: 1s;
+}
+#stfamilypara2:hover{
+  transform: translateY(-10px);
+}
+#stfamilypara2 h6{
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#stfamilypara2 p{
+  font-family: "Josefin Sans", sans-serif;
+}
+#stfamilyparacol3{
+  display: flex;
+  align-items: center;
+}
+#stfamilypara3{
+   border-top-left-radius:     30px;
+  border-bottom-right-radius:  30px;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 0 8px rgba(119, 102, 250, 0.25);
+  transition: 1s;
+  border: solid 1px #7766fa;
+}
+#stfamilypara3:hover{
+  transform: translateY(-10px);
+}
+#stfamilypara3 h6{
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#stfamilypara3 p{
+  font-family: "Josefin Sans", sans-serif;
+}
+#stfamilypara4{
+  border-top-left-radius:     30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 0 8px rgba(119, 102, 250, 0.25);
+  transition: 1s;
+  border: solid 1px #7766fa;
+}
+#stfamilypara4:hover{
+  transform: translateY(-10px);
+}
+#stfamilypara4 h6{
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#stfamilypara4 p{
+  font-family: "Josefin Sans", sans-serif;
+}
+#stfamilypara5{
+  border-top-left-radius:     30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 0 8px rgba(119, 102, 250, 0.25);
+  transition: 1s;
+  border: solid 1px #7766fa;
+}
+#stfamilypara5:hover{
+  transform: translateY(-10px);
+}
+#stfamilypara5 h6{
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#stfamilypara5 p{
+  font-family: "Josefin Sans", sans-serif;
+}
+/* SMALL SCRREN */
+#smimg1{
+ border-radius: 50%;
+  height: 185px;
+  width:  185px;
+}
+#smimg1 img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+#col1sm{
+  padding: 10px;
+  /* border: solid 1px black; */
+}
+#smpara1{
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+  box-shadow: 0 0 12px rgba(119, 102, 250, 0.25); 
+   transition: 1s;
+   border-top-left-radius:     26px;
+   border-bottom-right-radius: 26px;
+   padding: 20px;
+   border: solid 1px #7766fa;
+}
+#smpara1 h6{
+  line-height: 22px;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+#smpara1 p{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  font-weight: 400;
+}
+.familynamesm{
+  display: flex;
+  justify-content: flex-end;
+}
+.familynamesm p{
+  font-weight: bold !important;
+  color: orangered;
+}
+@media (max-width:768px) {
+  .hrline{
+  height: 2px;
+  background-color: orangered;
+  width: 80px;
+  display: block;
+  margin: 0px auto;
+  border-radius: 50%;
+}
+}
+
+/* =============ST FAMILY CSS ENDS  =====*/
+
+/* JOIN CSS STARTS */
+#joincol1{
+  overflow: hidden;
+  }
+#joincol1 img{
+border-radius: 50px;
+height: 100%;
+width: 100%;
+ }
+
+#joincontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+#joincontent h1{
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#offers{
+  list-style-type:none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#offers li{
+  position: relative;
+  padding-left: 18px;
+}
+#offers li::before{
+  content: "‣";
+  position: absolute;
+  left: 0;
+  font-size: 35px;  
+  color: orangered;   
+  line-height: 0.8;
+}
+#offers li{
+  font-family: "Josefin Sans", sans-serif;
+}
+#joinnowbtn{
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  align-self: self-start;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: orangered;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: 1s;
+}
+#joinnowicon{
+  margin-bottom: 4px;
+  /* font-size: 20px; */
+}
+#joinnowbtn:hover{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  color: white;
+  transform:scale(1.1);
+}
+/* JOIN CSS ENDS */
+/* CUSTOMER CSS STARTS */
+
+#customerheading h1{
+background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+ font-weight: bold;
+}
+#googlereviewparent{
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(243, 244, 246, 1);
+}
+#ratingprarent{
+  display: flex;
+  flex-direction: column;
+  /* gap: 4px; */
+}
+#googlelogo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  /* border: solid 1px black; */
+}
+#googlelogo img{
+  margin-left: 0px;
+  height: 35px;
+  margin: auto 0px;
+}
+#googlelogo p{
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto 0px;
+}
+#starrating{
+  display: flex;
+  align-items: center;
+
+  /* margin-left: 12px; */
+}
+#starrating p{
+  margin: auto 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+#starrating img{
+  height: 40px;
+  margin: auto 0px;
+}
+#ratingbtn{
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 18px;
+  gap: 5px;
+  background-color: orangered;
+  color: white;
+  border-radius: 20px;
+  margin: auto 0px;
+}
+#rateusicon{
+  margin-bottom: 3px;
+  /* color: white; */
+  font-size: 30px;
+}
+/* SWIPER CSS STARTS */
+#card{
+  height: 220px;
+  width:  265px;
+  background: rgba(243, 244, 246, 1);
+  border: none;
+  border-radius: 20px;
+}
+
+#userprofile{
+  height: 40px;
+  width:  40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#userprofile p{
+  margin: auto;
+  font-weight: bold; 
+  color: white;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* border: solid 1px black; */
+  justify-content: center;
+
+}
+.details h6{
+  font-family: "Roboto", sans-serif;
+}
+.details p{
+  font-size: small;
+}
+#des{
+  margin-top: 4px;
+   font-size: medium;
+   font-family: "Josefin Sans", sans-serif;
+   color: #6b7280;
+}
+@media (max-width:768px) {
+  #card{
+  height: 220px;
+  width:  300px;
+  background: rgba(243, 244, 246, 1);
+  border: none;
+  border-radius: 20px;
+}
+}
+
+/* CUSTOMER CSS ENDS */
+/* BG BANNER CSS STARTS */
+#offers h3{
+  font-weight: bolder;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  
+}
+#bgbanner img{
+  border-radius: 20px;
+  height: 450px;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+   /* width: 30px;
+  height: 30px; */
+  transform: scale(0.5);
+  border-radius: 50%;
+  /* background: linear-gradient(90deg, #8B7CF6, #B18CFF); */
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  font-size: 5px !important;
+  font-weight: bold;
+}
+@media (max-width:768px) {
+  #bgbanner img{
+  border-radius: 20px;
+  height: 220px;
+}
+}
+/* BG BANNER CSS ENDS */
+/*SIGNUP CSS STARTS */
+#SignupCf{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(90deg, #DAD6FF, #E7D9FF); */
+}
+
+#registercol{
+  border-radius: 20px;
+  height: 88vh;
+  box-shadow: 0px 0px 25px #9f94f5;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+  transition: 1s;
+}
+#registercol:hover{
+  overflow-y: auto;
+}
+
+#signupform{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input,.input2{
+  margin-top: 6px;
+  border-radius: 20px;
+}
+.input:focus{
+  box-shadow: none !important;
+   border: solid 3px #513bf7;
+}
+#passwordinputsignin{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#eyepassword{
+  border-top-right-radius:    20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+#passwordinputsignin:focus{
+  box-shadow: none !important;
+  border: solid 3px #513bf7;
+}
+#signupsubmit{
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: orangered;
+  color: white;
+  border: none;
+}
+#signupsubmit:focus{
+  border: none !important;
+}
+.register h6{
+  font-weight: bold;
+  color: orangered;
+  font-family: "Josefin Sans", sans-serif;
+}
+.register h4{
+  font-weight: bold;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+ 
+}
+#signupform label{
+  font-weight: bold;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#imgcolsignup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#imgcolsignup img{
+  height: 500px;
+  animation: floatUpDown 3s ease-in-out infinite;
+  }
+  @keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.eyepassword{
+  /* font-size: small; */
+  font-size: 20px;
+}
+#alreadyhavenaccount p{
+  font-size: small;
+}
+.alreadylogin{
+  text-decoration: none;
+  color: orangered;
+}
+@media (max-width:768px) {
+  #registercol{
+  border-radius: 20px;
+  height: 75vh;
+  box-shadow: 0px 0px 25px #9f94f5;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+  transition: 1s;
+}
+#registercol:hover{
+  overflow-y: auto;
+}
+}
+
+/*SIGNUP CSS ENDS */
+/* LOGIN CSS STARTS */
+#loginCf{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #cbc4fd, #cec3e4);
+  background: linear-gradient(to bottom, #8B7CF6, #B18CFF);
+ 
+}
+#logincard{
+  position: relative;
+ min-height:  375px;
+  width:  350px;
+  border-radius: 30px;
+  background: transparent;
+  box-shadow: 0px 0px 20px #7462fc;
+  border: none;
+}
+#logincardbody{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.signin{
+  text-decoration: none;
+  color: orangered;
+}
+.inputlogin{
+ border-radius: 20px;
+}
+#passinput{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#loginigt{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.inputlogin:focus{
+  box-shadow: none;
+  border: solid 3px #462ff0;
+}
+.inputlogin::placeholder{
+  font-size: small;
+}
+#loginbtn input{
+  border: none;
+  padding: 8px 22px;
+  border-radius: 20px;
+  color: white;
+  background-color: #ff4500;
+  /* background: linear-gradient(to bottom, #FF512F, #DD2476);
+  background: linear-gradient(to bottom, #ff4500, #ff8c00); */
+  background: linear-gradient(to bottom,
+  #ff4500,   
+  #f55b23,
+  #ff5100
+);
+}
+#errormessage{
+  height: 20px;
+}
+#loginbtn input:focus{
+  box-shadow: none;
+  border: none;
+}
+#usericon{
+  /* border: solid 1px black; */
+  height: 85px;
+  width:  85px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 38%;
+  z-index: 100;
+  /* background: linear-gradient(90deg, #8B7CF6, #B18CFF); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+ 
+}
+#usericonn{
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+#passwordicon{
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+#logincard label{
+  /* font-weight:bolder; */
+  color: white;
+  /* font-family: "Josefin Sans", sans-serif; */
+   /* font-family: "Source Serif 4", serif; */
+    font-family: "Roboto", sans-serif;
+}
+#donthavelogin{
+  margin-bottom: 10px;
+  font-size: small;
+}
+/* LOGIN CSS ENDS */
+
+/* NEW ARRIVALS CSS STARTS */
+#newarrivalsheading h2{
+  font-weight: bold;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.orangered{
+  font-family: "Josefin Sans", sans-serif;
+  color: orangered;
+}
+#marqueenewarrivals{
+  display: flex !important;
+  gap: 20px;
+}
+#marqueenewarrivals p{
+  color: #513bf7;
+  font-family: "Josefin Sans", sans-serif !important;
+}
+.categories{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories h3{
+  font-weight: bold;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto 0px;
+}
+.viewmore{
+  font-size: 22px;
+  text-decoration: none;
+  color: #462ff0;
+  margin: auto 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+}
+.viewmoreicon{
+  margin: auto 0px;
+  font-size: 22px;
+  margin-bottom:4px
+}
+.viewmore:hover{
+  color: orangered;
+}
+.namecategory{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.namecategory h3{
+  margin: auto 0px;
+  font-size: small;
+  font-weight: bolder;
+  font-family: "Google Sans", sans-serif;
+}
+.imageparent{
+  padding: 5px;
+  height: 220px;
+  overflow: hidden;
+} 
+.imageparent img{
+  height: 100%;
+  border-radius: 20px;
+  transition: 1s;
+}
+.imageparent img:hover{
+    transform: scale(1.1);
+}
+.menscardarrivals{
+  border: none;
+  box-shadow: 0px 0px 10px #c9c2f1;
+  transition: 1s;
+}
+.menscardarrivals:hover{
+  transform: translateY(-20px);
+}
+.namecategory p{
+  color: white;
+  padding: 3px 5px;
+  border-radius: 20px;
+  background-color:blueviolet;
+  margin: auto 0px;
+  font-size: small;
+}
+.pdctdes{
+  text-align: justify;
+  font-size: small;
+  font-family: "Google Sans", sans-serif;
+}
+.pdctprice{
+  /* font-family: "Josefin Sans", sans-serif; */
+  
+  font-size: small;
+}
+.viewmorebutton{
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 16px;
+    background-color: #817d7d;
+    color: white;
+    border-radius: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    transition: 1s;
+}
+.viewmorebutton:hover{
+  background-color: orangered;
+  color: white;
+  transform: scale(1.1);
+  border: none;
+}
+.viewmoreiconn{
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+.pricecolor{
+  font-weight: bolder;
+  color: green;
+}
+.imageparentKids{
+  padding: 5px;
+  height: 160px;
+  overflow: hidden;
+} 
+.imageparentKids img{
+  height: 100%;
+  border-radius: 20px;
+  transition: 1s;
+}
+.imageparentKids img:hover{
+    transform: scale(1.1);
+}
+.namecategoryKids{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.namecategoryKids h3{
+  font-weight:bold;
+  font-size: small;
+  margin: auto 0px;
+   font-family: "Google Sans", sans-serif;
+}
+.namecategoryKids p{
+  color: white;
+  padding: 3px 5px;
+  border-radius: 20px;
+  background-color:orange;
+  margin: auto 0px;
+  font-size: small;
+}
+.namecategorywomen{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.namecategorywomen p{
+  color: white;
+  padding: 3px 5px;
+  border-radius: 20px;
+  background-color:palevioletred;
+  margin: auto 0px;
+  font-size: small;
+  margin: auto 0px;
+}
+.namecategorywomen h3{
+  font-weight: bold;
+  margin: auto 0px;
+  font-size:small;
+   font-family: "Google Sans", sans-serif;
+}
+.namecategoryShoes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.namecategoryShoes p{
+  color: white;
+  padding: 3px 5px;
+  border-radius: 20px;
+  background-color:brown;
+  margin: auto 0px;
+  font-size: small;
+  margin: auto 0px;
+}
+.namecategoryShoes h3{
+  font-weight: bold;
+  margin: auto 0px;
+  font-size: small;
+  font-family: "Google Sans", sans-serif;
+}
+.namecategoryBags{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.namecategoryBags p{
+  color: black;
+  padding: 3px 5px;
+  border-radius: 20px;
+  background-color:aqua;
+  margin: auto 0px;
+  font-size: small;
+  margin: auto 0px;
+}
+.namecategoryBags h3{
+  font-weight: bold;
+  margin: auto 0px;
+  font-size:small;
+  font-family: "Google Sans", sans-serif;
+}
+/* NEW ARRIVALS CSS ENDS */
+/* MEN SECTION CSS STARTS */
+#mensectioncontent h2{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#mensectioncontent h4{
+  font-family: "Josefin Sans", sans-serif;
+  color: orangered;
+  font-size: small;
+  font-weight: bolder;
+  font-style: italic;
+}
+#MensCard{
+  position: relative;
+  box-shadow: 0px 0px 10px #c9c2f1;
+  border: none;
+  transition: 1s;
+  border-radius: 20px;
+}
+.overlay{
+  display: none;
+  position: absolute;
+  inset: 0; 
+  top: 0px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  transition: 1s;
+}
+#MensCard:hover {
+  transform: translateY(-12px);
+}
+#MensCard:hover .overlay{
+  display: block;
+}
+.imageParentInd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  position: relative;
+  padding: 8px;
+
+}
+.imageParentInd img{
+  border-radius: 20px;
+  height: 100%;
+}
+.categorypdcts{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categorypdcts h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.categorypdcts p{
+  font-size: small;
+  padding: 4px 6px;
+  margin: auto 0px;
+  background-color: blueviolet;
+  border-radius: 20px; 
+  color: white;
+}
+.price{
+  font-size: small;
+}
+.pricerate{
+  font-size: medium;
+  font-weight: bolder;
+  color: green;
+  margin-top: 5px;
+}
+.cartbtn{
+  border: none;
+  border-radius: 20px;
+  background-color:#e6e2ff;
+  padding: 6px 16px;
+  color: black;
+  /* box-shadow: 0px 0px 10px grey; */
+  font-size: small;
+  text-align: center;
+}
+.carticon{
+  transition: 1s;
+  display: none;
+}
+.addtocart:hover .carticon{
+  display: inline;
+}
+.addtocart:hover .cartbtn{
+  color: white;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+}
+
+.heartdetails{
+  top:   15px;
+  right: 20px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  transition: 1s;
+}
+#MensCard:hover .heartdetails{
+    display: flex;
+}
+.hearticonparent{
+  background-color: #9f94f5;
+  height: 40px;
+  width:  40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.hearticonparent{
+  background-color: orangered;
+  height: 40px;
+  width:  40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.HeartIcon,.detailsicon{
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+/* MEN SECTION CSS ENDS */
+/* KIDS CSS STARTS */
+.imageParentKids{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 190px;
+  border-radius: 20px;
+}
+.imageParentKids img{
+  height: 100%;
+  border-radius: 20px;
+}
+.overlayKids{
+  display: none;
+  position: absolute;
+  inset: 0; 
+  top: 0px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  transition: 1s;
+  position: absolute;
+  /* z-index: 100; */
+  transition: 1s;
+}
+.kidscard{
+  transition: 1s;
+}
+.kidscard:hover .overlayKids{
+  display: block;
+}
+.categorykidssec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categorykidssec h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.categorykidssec p{
+  color: white;
+  background-color: orange;
+  font-size: small;
+  padding: 2px 6px;
+  margin: auto 0px;
+  border-radius: 20px;
+}
+/* KIDS CSS ENDS */
+/* WOMEN SECTION CSS STARTS */
+
+.categoryWomensec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryWomensec h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.categoryWomensec p{
+  color: black;
+  background-color: pink;
+  font-size: small;
+  padding: 2px 6px;
+  margin: auto 0px;
+  border-radius: 20px;
+}
+/* WOMEN SECTION CSS ENDS */
+/* SHOES SECTION CSS STARTS */
+.categoryShoessec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryShoessec h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.categoryShoessec p{
+  color: white;
+  background-color: brown;
+  font-size: small;
+  padding: 2px 6px;
+  margin: auto 0px;
+  border-radius: 20px;
+}
+/* SHOES SECTION CSS ENDS */
+/* BAGS CSS STARTS */
+.categoryBagsec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryBagsec h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.categoryBagsec p{
+  color: white;
+  background-color: black;
+  font-size: small;
+  padding: 2px 6px;
+  margin: auto 0px;
+  border-radius: 20px;
+}
+/* BAGS CSS ENDS */
+/* PRODUCTPAGE DYNAMIC CSS STARTS */
+#rowdynamic{
+  box-shadow: 0px 0px 10px #B18CFF;
+}
+#dynamicpagecf{
+  /* margin-top: 40px; */
+  /* padding: 30px 0px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pdctpageimgparent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow:
+   hidden;
+}
+#pdctpageimgparent img{
+  border-radius: 30px;
+  height: 350px;
+  transition: 1s;
+}
+#pdctpageimgparent img:hover{
+ 
+  transform: scale(1.1);
+
+}
+
+#dynamicpagecontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 8px; */
+}
+#dynamicpagecontent h1{
+  font-size: 40px;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#dynamicpagecontent p{
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 30px;
+}
+#buynowdynamicbtn{
+  background-color:#cec8f5;
+  border-radius: 20px;
+  padding: 10px 30px;
+  border: solid 1px #8B7CF6;
+  align-self: flex-start;
+  transition: 1s;
+  margin: auto 0px;
+}
+#buynowdynamicbtn:hover{
+  color: white;
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  box-shadow: 0px 0px 5px #8B7CF6;
+  border: none;
+}
+
+.pricedynamic{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: green;
+}
+#pricecategory{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#pricecategory h6{
+  margin: auto 0px;
+}
+#pricecategory p
+{
+  margin: auto 0px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 6px 15px;
+  border-radius: 20px;
+  background-color: orangered;
+  color: white;
+  box-shadow: 0px 0px 10px orangered;
+}
+@media (max-width:768px) {
+  #dynamicpagecf{
+  margin-top: 140px;
+  /* padding: 30px 0px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  #pdctpageimgparent img{
+  border-radius: 20px;
+  height: 265px;
+  transition: 1s;
+}
+#smallscheading{
+  font-size: 25px !important;
+}
+#dynamicpagecontent p{
+  text-align: justify;
+}
+}
+/* PRODUCTPAGE DYNAMIC CSS ENDS */
+/* SEARCH PRODUCT CSS STARTS */
+.imgparentproduct{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+}
+.imgparentproduct img{
+  height: 100%;
+  border-radius: 20px;
+}
+#searchcard{
+  border: none;
+}
+.namecategorysearch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.namecategorysearch h6{
+  font-size: small;
+  margin: auto 0px;
+}
+.namecategorysearch p{
+  font-size: small;
+  padding: 3px 6px;
+  border-radius: 20px;
+  background-color: aqua;
+  margin: auto 0px;
+}
+#searchaddtocartbtn{
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  background-color: orangered;
+}
+.priceparent{
+  font-size: small;
+}
+.searchpdctprice{
+  color: green;
+  font-weight: bolder;
+}
+#SearchCf{
+ 
+  /* margin-top: 700px; */
+}
+/* SEARCH PRODUCT CSS ENDS */
+/* ADD TO CART CSS STARTS */
+#carttable th,td{
+   font-family: "Josefin Sans", sans-serif;
+}
+#RemoveCart{
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: orangered;
+  color: white;
+}
+#addeditemsheading{
+  display: flex;
+  justify-content: space-between;
+}
+#addeditemsheading h3{
+   /* font-size: 40px; */
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto 0px;
+}
+.cartaddedicon{
+  color: #7766fa;
+  margin-bottom: 5px;
+}
+#checkoutbtn{
+ font-family: "Josefin Sans", sans-serif; 
+}
+/* ADD TO CART CSS ENDS */
+
+/* ABOUT US CSS STARTS */
+#aboutcf{
+
+}
+#aboutusheading h2{
+   background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#aboutusimgcol{
+ 
+  /* background-color: aqua; */
+}
+#aboutusimgcolimg{
+  border-radius: 20px;
+  height: 285px;
+}
+#aboutcontent{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#aboutcontent h1{
+  font-size: 35px;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+.aboutpara{
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+}
+.aboutpara p
+{
+  color: #777;
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+}
+#explorebtn{
+  align-self: flex-start;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: black;
+  /* margin: 0px auto; */
+  border: solid 1px #462ff0;
+  transition: 1s;
+  font-family: "Josefin Sans", sans-serif;
+}
+#explorebtn:hover{
+  background-color: orangered;
+  color: white;
+  transform: scale(1.1);
+  border: solid 1px orangered;
+}
+.orangered{
+  font-weight: bold;
+}
+#whowearecol1{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.whowearehead{
+  color: orangered;
+  font-weight: bold;
+  font-size: small;
+  font-family: "Josefin Sans", sans-serif;
+}
+.whowearestyle{
+   background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 26px;
+}
+#whowearep2 p{
+  color: #777;
+  font-family: "Josefin Sans", sans-serif;
+}
+#whowearecol2parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whowearecol2childs{
+  background-color: #e9e3f7;
+  border-radius: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 130px;
+  width:  220px;
+  border: solid 2px transparent;
+  transition: 1s;
+}
+.iconwhoweare{
+  font-size: 35px;
+}
+.whowearecol2childs p{
+  /* color: white; */
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.whowearecol2childs:hover{
+  background: linear-gradient(90deg, #cec8fa, #ba9ef7);
+  transform: scale(1.1);
+  border: solid 2px #7462fc;
+}
+.whowearecol2childs:hover p{
+ color: orangered;
+}
+.whowearecol2childs:hover .iconwhoweare{
+ color: orangered;
+}
+@media (max-width:768px) {
+  #aboutusimgcolimg{
+  border-radius: 20px;
+  height: 250px;
+}
+.whowearecol2childs{
+  background-color: #e9e3f7;
+  border-radius: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 150px;
+  width:  170px;
+  border: solid 2px transparent;
+  transition: 1s;
+}
+}
+#whychooseus h2{
+  color: orangered;
+  font-weight: bolder;
+  font-size: small;
+  font-family: "Josefin Sans", sans-serif;
+}
+#whychooseus h1
+{
+  font-size: 35px;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#whatweoffercard{
+  transition: 1s;
+  border-radius: 20px;
+  background-color: #e9e3f7;
+}
+#whatweoffercard:hover{
+ transform: scale(1.1);
+ border: solid 1px orangered;
+}
+#whatweoffercard:hover .iconwhywechooseicon
+{
+   box-shadow: 0px 0px 20px orangered;
+}
+
+#whatweoffercard h5{
+   background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#whatweoffercard p{
+  font-family: "Josefin Sans", sans-serif;
+  text-align: justify;
+  color:#6b7280;
+}
+.iconwhywechooseicon{
+  box-shadow: 0px 0px 5px orangered;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+.iconwhywechooseicon i{
+  font-size: 25px;
+}
+#whattweoffercardbody{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#askedquestion{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+.accordion-body{
+   font-family: "Josefin Sans", sans-serif;
+}
+strong{
+  font-family: "Josefin Sans", sans-serif;
+}
+/* ABOUT US CSS ENDS */
+/* FOOTER CSS STARTS */
+#footercf{
+  background-color:#f3f4f6;
+}
+#footercol1{
+  
+}
+#brandimgfooter{
+  height: 65px;
+ }
+ #footercol1 h4{
+   font-family: "Josefin Sans", sans-serif;
+  color: #7462fc;
+ }
+#footercol1 p{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+#footercol2 h5{
+ background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-family: "Josefin Sans", sans-serif;
+}
+#footerLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.linksFooter{
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
+  color: #777;
+}
+#footerservices h5{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-family: "Josefin Sans", sans-serif;
+}
+#servicesfootercont{
+  display: flex;
+  flex-direction: column;
+  gap: 0px !important;
+}
+#servicesfootercont p{
+  font-family: "Josefin Sans", sans-serif;
+  /* font-size: small; */
+  color: #777;
+ 
+}
+#footercolcontact{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#footercolcontact h5{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-family: "Josefin Sans", sans-serif; 
+}
+.contact{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact p{
+  font-family: "Josefin Sans", sans-serif; 
+  color: #7462fc;
+  margin: auto 0px;
+}
+.footericon{
+  color: #7462fc;
+}
+
+/* FOOTER CSS ENDS */
+
+#contactheading h2
+{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+}
+#contactheading p{
+  font-family: "Josefin Sans", sans-serif;
+  color: #7766fa;
+}
+#contactusimaagecol1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 1px black; */
+}
+#contactusimaagecol1 img{
+  height: 280px;
+}
+#contactpara{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#contactpara p{
+   color: #777;
+   font-family: "Josefin Sans", sans-serif;
+}
+#contactuscol3 h4{
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;  
+}
+#contactuscol3 p{
+  color: #777;
+  font-size: medium;
+  font-family: "Josefin Sans", sans-serif; 
+}
+.contactinfo{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.contactinfo p{
+  margin: auto 0px;
+}
+.contactusicons{
+  font-size: 20px;
+  color: #7462fc;
+  margin: auto 0px;
+}
+#sendmessage h4{
+background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+   font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;  
+}
+.formcontact{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formcontact input{
+  border-radius: 20px !important; 
+}
+.formcontact textarea{
+  border-radius: 20px !important; 
+}
+.formcontact input::placeholder{
+font-size: small;
+}
+.formcontact textarea::placeholder{
+font-size: small;
+}
+.formcontact input:focus{
+  border: none;
+  box-shadow: none !important;
+  border: solid 3px #513bf7;
+}
+.formcontact textarea:focus{
+  border: none;
+  box-shadow: none !important;
+  border: solid 3px #513bf7;
+}
+#messagecontact{
+  color: whitesmoke;
+  background-color: orangered;
+  margin: 0px auto;
+  align-self:flex-start;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: "Josefin Sans", sans-serif;  
+}
+@media (max-width:768px) {
+  #contactusimaagecol1 img{
+  height: 20px;
+}
+}
+/* CONTACT CSS ENDS */
+/* INVOICE CSS STARTS */
+#thanksvisit{
+  font-family: "Josefin Sans", sans-serif;  
+  font-size: medium;
+}
+.thanksvoice{
+  font-family: "Josefin Sans", sans-serif;  
+  font-size: medium;
+}
+.totalprice{
+  font-family: "Josefin Sans", sans-serif;
+  color: red;
+}
+/* INVOICE CSS ENDS */
+#searchcard{
+transition: 1s;
+position: relative;
+}
+.heartdetailsSearch{
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+#searchcard:hover .heartdetailsSearch{
+  display: flex;
+}

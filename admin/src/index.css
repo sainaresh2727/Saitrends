@@ -1,0 +1,338 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* NAVBAR CSS STARTS */
+#navbarcf{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+#navbarcontainerlg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px #858080;
+}
+#Brandimg img{
+    margin: auto 0px;
+    height: 90px;
+}
+#adminpanel h3{
+  font-weight: bold;
+  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  margin: auto 0px;
+  /* font-style: italic; */
+}
+#lgmenus{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    gap: 35px;
+    align-items: center;
+}
+.link{
+    margin: auto 0px;
+    text-decoration: none;
+    color: black;
+}
+#searchpdct input{
+    margin: auto 0px;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px;
+    border: solid 1px grey;
+}
+#searchpdct{
+    width: 200px;
+}
+#searchpdct input:focus{
+    box-shadow: none !important;
+    /* border: solid 3px #442df3; */
+}
+#searchicon
+{
+    font-size: 20px;
+    border: solid 1px grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#searchicon:focus{
+    border: solid 3px #442df3;
+}
+/* NAVBAR CSS ENDS */
+
+/* PRODUCT CSS STARTS */
+#productaddcf{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+   
+}
+#productcolumn{
+    border: none !important;
+    height: 65vh;
+    overflow-y: hidden;
+    scrollbar-gutter: stable; 
+}
+#productcolumn:hover{
+    overflow-y: scroll;
+}
+#productcardadd{
+    border: none;
+}
+#productform{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputarea{
+    margin-top: 8px;
+    border-radius: 20px !important;
+}
+.inputarea:focus{
+    border: none !important;
+    box-shadow:none !important ;
+    border: solid 3px #442df3 !important;
+}
+#sumbit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sumbit input{
+    
+    border: none;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: white;
+    border-radius: 20px;
+}
+#adminimgcol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px black; */
+}
+#adminimgcol img{
+    animation: floatUpDown 3s ease-in-out infinite;
+    border-radius: 20px;
+    height: 480px;
+}
+#productform label{
+  font-weight: bold;
+  background: linear-gradient(90deg, #705ff3, #B18CFF);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+#adminprofileimg{
+    height: 40px;
+    width:  40px;
+}
+#adminprofileimg img{
+    border-radius: 50%;
+    margin: auto 0px;
+    height: 100%;
+    width: 100%;
+}
+.link{
+    position: relative;
+}
+.link::before{
+    content: "";
+    height: 2px;
+    width: 0px;
+    background-color: orangered;
+    position: absolute;
+    transition: 1s;
+    bottom: -3px;
+    border-radius: 20px;
+}
+.link:hover::before{
+    width: 100%;
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* PRODUCT CSS ENDS */
+
+/* PRODUCT LIST CSS STARTS */
+#imgpdctlist{
+    height: 120px;
+    border-radius: 20px;
+}
+#pdcteditbtn{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #705ff3, #B18CFF);
+    gap: 6px;
+    border-radius: 20px;
+    color: white;
+}
+#pdctdeletetbtn{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    gap: 2px;
+    background-color: orangered;
+}
+.Price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 20px;
+    background-color: #f73a3a;
+    margin-top: 14px;
+}
+.Category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    
+    margin-top: 18px;
+}
+.updateicon{
+    margin-bottom: 4px;
+}
+#pdctstable{
+background: linear-gradient(90deg, #c8c4ec, #cfc2eb);
+border-radius: 20px !important;
+}
+#pdctstable th,td{
+    padding: 20px;
+}
+#updatepdctform{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#savepdct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#savepdct input{
+    border: none;
+    padding: 10px 30px;
+    align-self:flex-start;
+    background-color: orangered;
+    border-radius: 20px;
+    color: white;
+}
+.pdctupdateinput{
+    margin-top: 10px;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+}
+.pdctupdateinput:focus{
+    border: solid 4px #442df3;
+}
+#updatepdctform{
+    overflow-y: hidden;
+    /* background-color: aqua; */
+    height: 500px;
+    scrollbar-gutter: stable;
+}
+#updatepdctform:hover{
+    overflow-y: auto;
+}
+#updatepdctform label{
+  font-weight: bold;
+  background: linear-gradient(90deg, #705ff3, #B18CFF);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+.updatehere{
+    background: linear-gradient(90deg, #705ff3, #B18CFF);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+.samedivpdctupdate{
+    display: flex;
+    justify-content: space-between;
+}
+.sectionname h2
+{
+  background: linear-gradient(90deg, #705ff3, #B18CFF);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+.totalcount{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.totalcount h5{
+  /* background: linear-gradient(90deg, #705ff3, #B18CFF);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  margin-block-start: auto 0px;
+}
+.lengthcolor{
+    color: orangered !important;
+}
+/* PRODUCT LIST CSS ENDS */
+/* USERS LIST CSS STARTS */
+#userstable{
+background: linear-gradient(90deg, #c8c4ec, #cfc2eb);
+border-radius: 20px !important;
+}
+#userstable th{
+    font-family: "Josefin Sans", sans-serif;
+    color: orangered;
+}
+#userstable th,td{
+    font-family: "Josefin Sans", sans-serif;
+    padding: 20px;
+}
+#totaluserslength{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#totaluserslength h5{
+    font-family: "Josefin Sans", sans-serif;
+}
+#totaluserslength span{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    color: orangered;
+    margin: auto 0px;
+}
+/* USERS LIST CSS ENDS */

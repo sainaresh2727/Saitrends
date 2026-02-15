@@ -134,13 +134,36 @@
   padding: 6px 20px;
   text-decoration: none;
   border: none;
-  background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  /* background: linear-gradient(90deg, #8B7CF6, #B18CFF); */
   color: white;
   box-shadow: 0 4px 10px rgba(183, 169, 238, 0.45);
   border-radius: 20px;
   position: relative;
+  animation: colorChange 6s ease-in-out infinite;
+}
+@keyframes colorChange {
+  0% {
+      background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  }
+  20% {
+    background:orangered;
+  }
+  40% {
+      background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  }
+  60% {
+    background:orangered;
+  }
+   80% {
+      background: linear-gradient(90deg, #8B7CF6, #B18CFF);
+  }
+   100% {
+    background:orangered;
+  }
+
 }
 .categoriescontent{
+  
   margin: auto 0px;
 }
 .categoriessection{

@@ -906,6 +906,7 @@ background: linear-gradient(90deg, #8B7CF6, #B18CFF);
   color: orangered;
 }
 .inputlogin{
+ border: solid 1px #462ff0;
  border-radius: 20px;
 }
 #passinput{
@@ -915,10 +916,13 @@ background: linear-gradient(90deg, #8B7CF6, #B18CFF);
 #loginigt{
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background-color: white;
+  border: none;
+  border: solid 1px #462ff0;
 }
 .inputlogin:focus{
   box-shadow: none;
-  border: solid 3px #462ff0;
+  border: solid 1px #462ff0;
 }
 .inputlogin::placeholder{
   font-size: small;
@@ -2071,3 +2075,26 @@ position: relative;
 #searchcard:hover .heartdetailsSearch{
   display: flex;
 }
+
+.accordion-item{
+  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-button {
+  position: relative;
+  font-weight: 500;
+}
+
+.accordion-button::before {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+

@@ -23,7 +23,7 @@ function Context({children}) {
   async function UserDetailsSignUp(e) {
     e.preventDefault()
     try{
-      let Res=await Axios.post('http://localhost:8000/users/add',{
+      let Res=await Axios.post('https://saitrends-backend.onrender.com/users/add',{
         username,password,email,address,phno,gender
       })
      
@@ -52,7 +52,7 @@ function Context({children}) {
   async function LoginFun(e) {
     e.preventDefault()
     try{
-      let Res=await Axios.post('http://localhost:8000/login/users/add',{
+      let Res=await Axios.post('https://saitrends-backend.onrender.com/login/users/add',{
         lname,lpass
       })
       localStorage.setItem("Token",Res.data.token)
@@ -82,7 +82,7 @@ function Context({children}) {
 
   async function Allproducts() {
    try{
-     let Res=await Axios.get('http://localhost:8000/product/get')
+     let Res=await Axios.get('https://saitrends-backend.onrender.com/product/get')
      setallProduct(Res.data.data)
    }
    catch(err){
@@ -140,7 +140,7 @@ function Context({children}) {
   
   async function AddToCart(productId) {
     try{
-      let Res=await Axios.post('http://localhost:8000/cart/add',{productId},
+      let Res=await Axios.post('https://saitrends-backend.onrender.com/cart/add',{productId},
         {
         headers: {
           authorization: `Bearer ${Token}`
@@ -197,7 +197,7 @@ function Context({children}) {
 
   async function GetAddedPdct() {
     try{
-      let Res=await Axios.get('http://localhost:8000/cart/get',{
+      let Res=await Axios.get('https://saitrends-backend.onrender.com/cart/get',{
         headers:{
           authorization:`Bearer ${Token}`
         }
@@ -217,7 +217,7 @@ function Context({children}) {
   async function RemoveFromCart(productId) {
   try {
     let Res = await Axios.delete(
-      `http://localhost:8000/cart/remove/${productId}`,
+      `https://saitrends-backend.onrender.com/cart/remove/${productId}`,
       {
         headers: {
           authorization: `Bearer ${Token}`
